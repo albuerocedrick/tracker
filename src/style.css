@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+.box {
+  @apply border rounded-2xl;
+}
+
+.hover-effect {
+  @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:bg-[#7a6ca3];
+}
+
+.log-in-btn {
+  @apply bg-[#7a6ca3] p-4 rounded-xl text-white shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-[#7a6ca3]
+}
+
+.sign-container {
+  @apply w-4/5 flex flex-col
+}
+
+.sign-label {
+  @apply font-medium
+}
+
+.sign-input {
+  @apply h-12 w-full bg-[#cfbfaf]/30 border border-[#9bb587]/50 focus:border-[#9bb587] focus:outline-0 focus:border-2 rounded-xl pl-4 font-medium 
+}
+
+.sign-submit {
+  @apply h-12 w-[250px] bg-[#7a6ca3] rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-white font-medium mt-4
+}
+
+/* Custom styles for toggle button */
+    .toggle-checkbox:checked {
+      right: 0;
+      border-color: #68D391;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #f4f3f2;
+    }
+    .toggle-wrapper {
+      transition: all 0.3s ease;
+    }

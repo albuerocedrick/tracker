@@ -1,0 +1,20 @@
+VUE JS
+
+DAY 1:
+    CDN LINK
+    CREATE AND MOUNT HTML TO VUE
+    DATA FUNCTION
+    V-FOREACH AND V-BIND(CAN BE :)
+DAY 2:
+    ':key' FOR INDEX ON FOREACH LOOP
+    PAGE CHANGING USING INDEX
+    'v-on:click' FOR CLICK EVENTS OR '@click' AS SHORTHAND
+    '@click.prevent' TO PREVENT TO GO TO THE HREF URL
+    CHANGING THE TAILWIND CLASSES WHEN THE BUTTON IS ACTIVE
+    COMPUTED PROPERTIES - reactive values that automatically update when their dependencies change.
+DAY 3:
+    CLI using VITE
+    created() -  lifecycle hook that runs right after the component is created, before it’s mounted to the DOM.
+    methods - executes when called
+    computed - executes when dependencies changed
+    
