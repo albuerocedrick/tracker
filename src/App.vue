@@ -9,7 +9,8 @@
         />
         <HeroSection
             :class="['h-screen', 'box', theme.border , theme.cardBg, 'flex', 'justify-center', 'items-center', 'mt-4']"
-            :theme="theme" />
+            :theme="theme" 
+            @NavModalOpen="NavModalOpen"/>
         <Features
             :theme="theme" />
         <LogInPage

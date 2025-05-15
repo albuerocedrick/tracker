@@ -8,14 +8,14 @@
                   class="flex items-center p-4 rounded-lg hover:bg-[#7a6ca3]/90 transition-colors"
                   :class="{'bg-[#7a6ca3]': selectedMenu === index}"
                   @click.prevent="$emit('ClickMenu', index)">
-                    <span :class="['mr-3', theme.textColor]" v-html="item.icon"></span>
-                    <span class=" font-medium text-xl" :class="theme.textColor">{{item.name }}</span>
+                    <span :class="['mr-3', theme.textColor, {'text-white': selectedMenu === index}] " v-html="item.icon"></span>
+                    <span class=" font-medium text-xl" :class="[theme.textColor, {'text-white': selectedMenu === index}]" >{{item.name }}</span>
                 </a>
                 </li>
             </ul>
             <ul>
                 <li>
-                    
+
                 </li>
             </ul>
         </div>
