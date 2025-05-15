@@ -34,7 +34,8 @@
         <SideBar class="h-full" :class="[theme.border, theme.cardBg] " @ClickMenu="clickMenu" :selectedMenu="selectedMenu" :theme="theme"/>
         <dashb 
             v-show="selectedMenu === 0"
-            :theme="theme"/>
+            :theme="theme"
+            @clickMenu="clickMenu"/>
         <tasks 
             v-show="selectedMenu === 1"
             :theme="theme"/>

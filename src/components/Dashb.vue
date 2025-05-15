@@ -10,11 +10,13 @@
             <MiniCalendar 
                 class="col-span-2 row-span-2"
                 :class="theme.cardBg"
-                :theme="theme"/>
+                :theme="theme"
+                />
             <MiniUpcomingDeadline
               class="col-span-2 row-span-3"
               :class="theme.cardBg" 
-              :theme="theme"/>
+              :theme="theme"
+              @clickMenu="forwardClickMenu"/>
             <div class="col-span-2 row-span-2 grid grid-cols-2 grid-rows-2 gap-4">
                 <MiniProjectList
                   class="row-span-2 col-span-1"
@@ -45,6 +47,12 @@ export default {
         MiniDateToday,
         MiniTime
     },
-    props: ['theme']
+    props: ['theme'],
+    emits: ['clickMenu'],
+    methods: {
+      forwardClickMenu(index) {
+        this.$emit('clickMenu', index);
+      }
+    }
 }
 </script>

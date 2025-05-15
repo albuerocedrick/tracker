@@ -2,7 +2,7 @@
     <div :class="['box p-4', theme?.border]">
         <div class="flex flex-row justify-between mb-4"> 
             <p :class="['font-semibold text-2xl', theme?.textColor]">Upcoming Deadline</p>
-            <p :class="['font-semibold text-xl ', theme.bg === 'bg-[#F4F3F2]' ? 'text-black/60' : 'text-white/60']">View All</p>
+            <a href="#" :class="['font-semibold text-xl ', theme.bg === 'bg-[#F4F3F2]' ? 'text-black/60' : 'text-white/60']" @click="$emit('clickMenu', 1)">View All</a>
         </div>
         <div class="flex flex-row w-full items-center">
             <div class="bg-green-400 w-7 h-7 rounded-full mr-4 flex-shrink-0"></div>
@@ -17,6 +17,7 @@
 <script>
     export default {
         props: ['theme'],
+        emits: ['clickMenu'],
         data() {
             return {
                 task: {
