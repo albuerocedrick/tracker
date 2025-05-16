@@ -5,7 +5,7 @@
 }
 
 .hover-effect {
-  @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:bg-[#7a6ca3];
+  @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg 
 }
 
 .log-in-btn {

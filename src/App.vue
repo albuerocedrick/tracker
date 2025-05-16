@@ -31,7 +31,8 @@
       :class="[theme.bg]">
         <MainNavBar
             class="col-span-2"
-            :theme="theme"/>
+            :theme="theme"
+            :selectedMenu="selectedMenu"/>
         <SideBar class="h-full" :class="[theme.border, theme.cardBg] " @ClickMenu="clickMenu" :selectedMenu="selectedMenu" :theme="theme"/>
         <dashb 
             v-show="selectedMenu === 0"
