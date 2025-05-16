@@ -92,7 +92,7 @@ export default {
             selectedMenu: 0,
             theme: {
                 bg: 'bg-[#F4F3F2]',
-                cardBg: 'bg-white',
+                cardBg: 'bg-[#EBE8E2]',
                 textColor: 'text-black',
                 border: 'border-black'
             },
@@ -123,7 +123,7 @@ export default {
                 this.theme.border = 'border-gray-600'
             } else {
                 this.theme.bg = 'bg-[#F4F3F2]';
-                this.theme.cardBg = 'bg-white';
+                this.theme.cardBg = 'bg-[#EBE8E2]';
                 this.theme.textColor = 'text-black';
                 this.theme.border = 'border-black';
             }

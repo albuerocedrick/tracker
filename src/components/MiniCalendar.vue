@@ -1,9 +1,9 @@
 <template>
   <div :class="['mini-calendar p-4 border box w-full rounded-lg h-full flex flex-col', theme?.border]">
-    <div class="header flex justify-between items-center mb-3 bg-[#7a6ca3] rounded-lg px-2">
-      <button @click="prevMonth" class="text-lg p-1 text-white font-bold">&lt;</button>
-      <span class="font-bold text-base text-white">{{ monthName }} {{ year }}</span>
-      <button @click="nextMonth" class="text-lg p-1 text-white font-bold">&gt;</button>
+    <div class="header flex justify-between items-center mb-3 bg-[#a2cffe] rounded-lg px-2">
+      <button @click="prevMonth" class="text-lg p-1  font-bold">&lt;</button>
+      <span class="font-bold text-base ">{{ monthName }} {{ year }}</span>
+      <button @click="nextMonth" class="text-lg p-1  font-bold">&gt;</button>
     </div>
     <div class="days grid grid-cols-7 text-center">
       <div :class="['day text-md font-bold py-2', theme?.textColor]" v-for="day in daysOfWeek" :key="day">{{ day }}</div>
@@ -16,8 +16,8 @@
           'date py-2 text-md font-medium cursor-pointer flex justify-center text-center items-center',
           {
             'text-gray-500': !date.isCurrentMonth,
-            'bg-[#7a6ca3] text-white rounded-full': date.isToday,
-            'bg-purple-200 rounded-full': isSelected(date) && !date.isToday
+            'bg-[#a2cffe] rounded-full': date.isToday,
+            'bg-gray-200 rounded-full': isSelected(date) && !date.isToday
           },
           !date.isToday && !isSelected(date) && date.isCurrentMonth ? theme?.textColor : ''
         ]"
@@ -26,16 +26,13 @@
         {{ date.day }}
       </div>
     </div>
-    <div v-if="selectedDate" class="mt-3 p-2 bg-gray-100 rounded text-center">
-      Selected: {{ formatSelectedDate }}
-    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'MiniCalendar',
-  props: ['theme'],
+  props: ['theme', ],
   data() {
     return {
       currentDate: new Date(),

@@ -17,6 +17,6 @@
 <script>
     export default {
         props: ['landingPages', 'theme'],
-        emits: ['NavModalOpen']
+        emits: ['NavModalOpen'] 
     }
 </script>
